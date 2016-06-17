@@ -1,0 +1,454 @@
+html {
+  font-size: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+body {
+  background-color: white;
+  color: black;
+  font-size: 1.8rem;
+  font-family: "Merriweather", serif;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 300;
+}
+
+.cf:after,
+.cf:before {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+.all {
+  margin: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .all {
+    margin: 0;
+  }
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1080px;
+}
+
+.upper {
+  padding: 38px;
+  background-color: #93c0c3;
+  font-family: "Merriweather Sans", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (orientation: landscape) and (max-width: 768px) {
+  .upper {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .upper {
+    padding: 15px 20px;
+  }
+}
+
+.upper nav {
+  margin-left: auto;
+}
+
+.upper nav a:hover:before {
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+}
+
+.upper nav a:hover[href='#about']:before {
+  width: 54px;
+}
+
+.upper nav a:hover[href='#services']:before {
+  width: 70px;
+}
+
+.upper nav a:hover[href='#contact']:before {
+  width: 68px;
+}
+
+.upper nav a:hover[href='pl.html']:before {
+  width: 16px;
+}
+
+.upper nav a:before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  top: 115px;
+  height: 2px;
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+  width: 0;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 768px) {
+  .upper nav a:before {
+    top: 95px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 768px) {
+  .upper nav a:before {
+    top: 55px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .upper nav div:not(.pl) {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .upper img {
+    width: 70%;
+    max-width: 277px;
+    height: auto;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 768px) {
+  .upper img {
+    width: 25%;
+  }
+}
+
+.upper nav.plNav a:hover:before {
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+}
+
+.upper nav.plNav a:hover[href='#about']:before {
+  width: 50px;
+}
+
+.upper nav.plNav a:hover[href='#services']:before {
+  width: 52px;
+}
+
+.upper nav.plNav a:hover[href='#contact']:before {
+  width: 68px;
+}
+
+.upper nav.plNav a:hover[href='index.html']:before {
+  width: 18px;
+}
+
+.button {
+  display: inline-block;
+  margin: 0 15px;
+  color: white;
+}
+
+.pl {
+  font-size: 1.6rem;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.foto {
+  background: url("../images/tlo.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+@media only screen and (max-width: 768px) {
+  .foto {
+    background-attachment: inherit;
+  }
+}
+
+.foto h1 {
+  color: white;
+  font-size: 4.2rem;
+  margin: 0;
+  padding: 15% 10px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .foto h1 {
+    font-size: 3.7rem;
+  }
+}
+
+.contentA {
+  background-color: #93c0c3;
+  color: white;
+}
+
+.firstTxt {
+  padding: 100px 80px;
+  font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .firstTxt {
+    padding: 20px;
+  }
+}
+
+.contentB {
+  background-color: white;
+  color: black;
+}
+
+.box1 {
+  padding: 100px 0;
+  position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+  .box1 {
+    padding: 40px 20px;
+  }
+}
+
+.serv {
+  color: #93c0c3;
+  font-size: 3.9rem;
+  font-family: "Merriweather Sans", sans-serif;
+  display: inline-block;
+  width: 15%;
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+}
+
+@media only screen and (max-width: 768px) {
+  .serv {
+    display: block;
+    position: static;
+    margin: 0 0 15px;
+  }
+}
+
+.tekst2 {
+  width: 65%;
+  font-size: 1.8rem;
+  float: right;
+}
+
+@media only screen and (max-width: 768px) {
+  .tekst2 {
+    width: auto;
+  }
+}
+
+.box2 {
+  margin: 0 0.5% 5%;
+  width: 30%;
+}
+
+@media only screen and (max-width: 768px) {
+  .box2 {
+    width: 100%;
+  }
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    display: block;
+    padding: 0 20px;
+  }
+}
+
+.ico {
+  margin-bottom: -25px;
+}
+
+.par {
+  display: inline-block;
+  color: #93c0c3;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 2.6rem;
+  margin-left: 20px;
+}
+
+.opis {
+  font-size: 1.4rem;
+  margin: 35px 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .opis {
+    margin: 0;
+  }
+}
+
+.contentC {
+  background: url("../images/photo2.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 150px;
+  padding: 10%;
+}
+
+@media only screen and (max-width: 768px) {
+  .contentC {
+    background-attachment: inherit;
+  }
+}
+
+.contentD {
+  background-color: #93c0c3;
+  color: white;
+  padding: 100px 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .contentD {
+    padding: 50px 20px;
+  }
+}
+
+.prebott {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 3.9rem;
+  margin: 0;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 768px) {
+  .prebott {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.lasttext {
+  font-size: 1.8rem;
+  display: inline-block;
+  width: 64%;
+  float: right;
+}
+
+@media only screen and (max-width: 768px) {
+  .lasttext {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+}
+
+.contact {
+  font-family: "Merriweather Sans", sans-serif;
+  border: 3px solid white;
+  font-size: 2.4rem;
+  padding: 2% 20%;
+  display: inline-block;
+  margin-top: 65px;
+  max-width: 375px;
+  max-height: 65px;
+}
+
+.contact:hover {
+  background-color: white;
+  color: #93c0c3;
+}
+
+.contentE {
+  padding: 70px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 570px) {
+  .contentE {
+    padding: 50px 20px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contentE {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contentE a:first-of-type {
+    display: none;
+  }
+}
+
+.contentE a img {
+  height: auto;
+  max-width: 100%;
+}
+
+.contentE .city {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 1.7rem;
+}
+
+@media only screen and (max-width: 570px) {
+  .contentE .city {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center;
+    margin: 10px;
+    margin-bottom: 50px;
+  }
+}
+
+/*# sourceMappingURL=maps/style.css.map */

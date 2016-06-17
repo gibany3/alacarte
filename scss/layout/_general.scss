@@ -1,0 +1,321 @@
+html {
+    font-size: 10px;
+    @include breakpoint(tablet) {
+        font-size: 9px;
+    }
+}
+body {
+    background-color: white;
+    color: black;
+    font-size: 1.8rem;
+    font-family: $primaryFont;
+    margin: 0;
+}
+p {
+    margin: 0;
+    line-height: 1.8;
+    font-weight: 300;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 300;
+}
+.cf:after,
+.cf:before {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+.cf:after {
+    clear: both;
+}
+.all {
+    margin: 20px;
+    @include breakpoint(tablet) {
+        margin: 0;
+    }
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1080px;
+}
+.upper {
+    padding: 38px;
+    background-color: #93c0c3;
+    font-family: $secondaryFont;
+    display: flex;
+    align-items: center;
+    @include breakpoint(horizontal) {
+      padding: 20px;
+    }
+    @include breakpoint(large-mobile) {
+      padding: 15px 20px;
+    }
+    nav {
+        a:hover {
+            &:before {
+                transition: width 0.2s;
+            }
+            &[href='#about']:before {
+                width: 54px;
+            }
+            &[href='#services']:before {
+                width: 70px;
+            }
+            &[href='#contact']:before {
+                width: 68px;
+            }
+            &[href='pl.html']:before {
+                width: 16px;
+            }
+        }
+        a:before {
+            content: "";
+            position: absolute;
+            background-color: #fff;
+            top: 115px;
+            height: 2px;
+            transition: width 0.2s;
+            width: 0;
+            box-sizing: border-box;
+            @include breakpoint(tablet) {
+                top: 95px;
+            }
+            @include breakpoint(horizontal) {
+              top: 55px;
+            }
+        }
+        margin-left: auto;
+        @include breakpoint(tablet) {
+            div:not(.pl) {
+                display: none;
+            }
+        }
+    }
+    img {
+        @include breakpoint(tablet) {
+            width: 70%;
+            max-width: 277px;
+            height: auto;
+        }
+        @include breakpoint(horizontal) {
+          width: 25%;
+        }
+    }
+    nav.plNav {
+        a:hover {
+            &:before {
+                transition: width 0.2s;
+            }
+            &[href='#about']:before {
+                width: 50px;
+            }
+            &[href='#services']:before {
+                width: 52px;
+            }
+            &[href='#contact']:before {
+                width: 68px;
+            }
+            &[href='index.html']:before {
+                width: 18px;
+            }
+        }
+    }
+}
+.button {
+    display: inline-block;
+    margin: 0 15px;
+    color: white;
+}
+.pl {
+    font-size: 1.6rem;
+    font-family: $secondaryFont;
+}
+.foto {
+    background: url('../images/tlo.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    @include breakpoint(tablet) {
+        background-attachment: inherit;
+    }
+    h1 {
+        color: white;
+        font-size: 4.2rem;
+        margin: 0;
+        padding: 15% 10px;
+        text-align: center;
+        @include breakpoint(tablet) {
+            font-size: 3.7rem;
+        }
+    }
+}
+.contentA {
+    background-color: #93c0c3;
+    color: white;
+}
+.firstTxt {
+    padding: 100px 80px;
+    font-size: 1.8rem;
+    @include breakpoint(tablet) {
+        padding: 20px;
+    }
+}
+.contentB {
+    background-color: white;
+    color: black;
+}
+.box1 {
+    padding: 100px 0;
+    position: relative;
+    @include breakpoint(tablet) {
+        padding: 40px 20px;
+    }
+}
+.serv {
+    color: #93c0c3;
+    font-size: 3.9rem;
+    font-family: $secondaryFont;
+    display: inline-block;
+    width: 15%;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    @include breakpoint(tablet) {
+        display: block;
+        position: static;
+        margin: 0 0 15px;
+    }
+}
+.tekst2 {
+    width: 65%;
+    font-size: 1.8rem;
+    float: right;
+    @include breakpoint(tablet) {
+        width: auto;
+    }
+}
+.box2 {
+    margin: 0 0.5% 5%;
+    width: 30%;
+    @include breakpoint(tablet) {
+        width: 100%;
+    }
+}
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include breakpoint(tablet) {
+        display: block;
+        padding: 0 20px;
+    }
+}
+.ico {
+    margin-bottom: -25px;
+}
+.par {
+    display: inline-block;
+    color: #93c0c3;
+    font-family: $secondaryFont;
+    font-size: 2.6rem;
+    margin-left: 20px;
+}
+.opis {
+    font-size: 1.4rem;
+    margin: 35px 0;
+    @include breakpoint(tablet) {
+        margin: 0;
+    }
+}
+.contentC {
+    background: url('../images/photo2.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 150px;
+    padding: 10%;
+    @include breakpoint(tablet) {
+        background-attachment: inherit;
+    }
+}
+.contentD {
+    background-color: #93c0c3;
+    color: white;
+    padding: 100px 20px;
+    @include breakpoint(tablet) {
+        padding: 50px 20px;
+    }
+}
+.prebott {
+    font-family: $secondaryFont;
+    font-size: 3.9rem;
+    margin: 0;
+    display: inline-block;
+    @include breakpoint(tablet) {
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+.lasttext {
+    font-size: 1.8rem;
+    display: inline-block;
+    width: 64%;
+    float: right;
+    @include breakpoint(tablet) {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+}
+.contact {
+    font-family: $secondaryFont;
+    border: 3px solid white;
+    font-size: 2.4rem;
+    padding: 2% 20%;
+    display: inline-block;
+    margin-top: 65px;
+    max-width: 375px;
+    max-height: 65px;
+}
+.contact:hover {
+    background-color: white;
+    color: #93c0c3;
+}
+.contentE {
+    padding: 70px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include breakpoint(large-mobile) {
+        padding: 50px 20px;
+        flex-wrap: wrap;
+    }
+    @include breakpoint(tablet) {
+        justify-content: space-between;
+    }
+    a {
+        &:first-of-type {
+            @include breakpoint(tablet) {
+                display: none;
+            }
+        }
+        img {
+            height: auto;
+            max-width: 100%;
+        }
+    }
+    .city {
+        font-family: $secondaryFont;
+        font-size: 1.7rem;
+        // margin: 25px 5px 0;
+        @include breakpoint(large-mobile) {
+            align-items: center;
+            margin: 10px;
+            margin-bottom: 50px;
+        }
+    }
+}
